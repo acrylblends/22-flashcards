@@ -1,0 +1,15 @@
+{
+  "name": "calendar",
+  "description": "The calendar at /calendar: upcoming reviews by date.",
+  "requires": [],
+  "inject": [
+    "flashcards",
+    "shell",
+    "router"
+  ],
+  "provides": [],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: calendar` / `name: calendar` after the decks row in blend.yaml"
+}

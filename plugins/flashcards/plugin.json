@@ -1,0 +1,15 @@
+{
+  "name": "flashcards",
+  "description": "The study domain: decks, cards, the SM-2-like schedule, reviews and the daily goal, saved as JSON in the app data home.",
+  "requires": [],
+  "inject": [
+    "appInstance"
+  ],
+  "provides": [
+    "flashcards"
+  ],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: flashcards` / `name: flashcards` before the page rows in blend.yaml"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "study",
+  "description": "The study session at /: the due card, reveal, four ratings and per-deck due counts.",
+  "requires": [],
+  "inject": [
+    "flashcards",
+    "shell",
+    "router"
+  ],
+  "provides": [],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: study` / `name: study` after the shell row in blend.yaml"
+}

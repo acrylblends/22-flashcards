@@ -1,0 +1,16 @@
+{
+  "name": "flashcards-shell",
+  "description": "The recall shell: the navy study navigation, the streak card and the page column.",
+  "requires": [],
+  "inject": [
+    "flashcards",
+    "router"
+  ],
+  "provides": [
+    "shell"
+  ],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: flashcards-shell` / `name: flashcards-shell` after the flashcards row in blend.yaml"
+}

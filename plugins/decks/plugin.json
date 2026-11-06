@@ -1,0 +1,15 @@
+{
+  "name": "decks",
+  "description": "Decks at /decks: the list, the create form and one deck cards with the add-card form.",
+  "requires": [],
+  "inject": [
+    "flashcards",
+    "shell",
+    "router"
+  ],
+  "provides": [],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: decks` / `name: decks` after the study row in blend.yaml"
+}

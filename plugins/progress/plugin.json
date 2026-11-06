@@ -1,0 +1,15 @@
+{
+  "name": "progress",
+  "description": "Progress at /progress: goal, accuracy, streak and recent review history.",
+  "requires": [],
+  "inject": [
+    "flashcards",
+    "shell",
+    "router"
+  ],
+  "provides": [],
+  "dependencies": {
+    "@deepseek-ai/cordis": "4.0.4"
+  },
+  "mount": "a row `- id: progress` / `name: progress` after the calendar row in blend.yaml"
+}

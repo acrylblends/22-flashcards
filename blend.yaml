@@ -1,0 +1,45 @@
+apiVersion: blends.acryl.dev/v1alpha1
+kind: Blueprint
+metadata:
+  id: acrylblends.flashcards
+  name: "Flashcards"
+  version: 0.1.0
+  category: education
+  description: "A focused spaced-repetition study space: four decks with 49 due cards, an SM-2-like scheduler, reveal and four ratings, deck and card creation, a review calendar and progress history."
+  license: MIT
+  visibility: public
+spec:
+  runtime: cordis
+  parameters:
+    hostname: { type: string, default: 127.0.0.1 }
+  rows:
+    - id: router
+      name: acryl-router
+    - id: home
+      name: home
+    # The domain: decks, cards, the schedule, reviews and the daily goal, saved as JSON in the app's data home.
+    - id: flashcards
+      name: flashcards
+    # The recall shell: the navy study navigation, the streak card and the page column.
+    - id: flashcards-shell
+      name: flashcards-shell
+    # The study session at /: the due card, reveal, the four ratings and the per-deck due counts.
+    - id: study
+      name: study
+    # Decks at /decks: the list, the create form and one deck's cards with the add-card form.
+    - id: decks
+      name: decks
+    # The calendar at /calendar: upcoming reviews by date.
+    - id: calendar
+      name: calendar
+    # Progress at /progress: the goal, accuracy, streak and the recent review history.
+    - id: progress
+      name: progress
+    - id: extensions
+      name: extensions
+    - id: server
+      name: acryl-node-server
+      config:
+        hostname: "{{parameters.hostname}}"
+    - id: acryl-door
+      name: acryl-door
